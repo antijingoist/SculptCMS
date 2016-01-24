@@ -1,0 +1,47 @@
+div.pageError {
+   border: 1px solid #ffd4d4;
+   background: #fff7f7;
+   color: #800000;
+   padding-bottom: 1em;
+   padding-top: 0px;
+}
+
+div.pageError h2 {
+   background: #efc7c7;
+   vertical-align: middle;
+   padding:3px 0px 3px 6px;
+   margin-top: 0px;
+}
+
+div.pageError p {
+   text-align: center;
+}
+
+div.systemError {
+   background: #fff7f7;
+   color: #800000;
+   padding-bottom: 1em;
+}
+
+div.systemError h2 {
+   margin-top: 0px;
+   background: #c40000;
+   vertical-align: middle;
+   padding:3px 0px 3px 6px;
+   color: white;
+}
+
+div.systemError h2:before {
+   content: " ";
+   background: url(images/icons/fatal.png) no-repeat;
+   background-size: contain;
+   background-position: center center;
+   padding-left: 28px;
+   padding-right: 28px;
+
+}
+
+div.systemError p {
+   text-align: left;
+   padding-left: 5px;
+}
