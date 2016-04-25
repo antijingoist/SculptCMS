@@ -12,6 +12,7 @@ $cache_time = 3600*24 * $cache_time_days; // Cache time is in seconds.
 
 $enabled_plugins = array();
 $enabled_stylesheets = array();
+$enabled_scripts = array();
 $current_page = _INPUT('p', 'index');
 $registered_pages = array('Home' => sculpt_page_url('index'));
 $registered_processors = array('system' => '');
@@ -157,6 +158,15 @@ function register_stylesheet($stylesheet_full_path) {
    return true;
 }
 
+
+function register_script($script_full_path) {
+   global $enabled_scripts;
+
+   $enabled_scripts[] = $script_full_path;
+
+   return true;
+}
+
 function print_stylesheets() {
   global $enabled_stylesheets;
 
@@ -168,6 +178,19 @@ function print_stylesheets() {
   }
 
   echo $stylesheet_data;
+}
+
+function print_scripts() {
+  global $enabled_scripts;
+
+  $script_data = "";
+  foreach($enabled_scripts as $script) {
+     if (file_exists($script)) {
+        $script_data .= '<script src="' . $script . '"></script>';
+     }
+  }
+
+  echo $script_data;
 }
 
 function sculpt_parse_markdown_file($md_file, $no_title = false) {
