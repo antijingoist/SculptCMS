@@ -1,0 +1,112 @@
+.sc_album_content {
+  display: inline-block;
+}
+
+.sc_album_cat {
+  display: block;
+  width: 100%;
+
+  border-bottom:  1px solid rgba(0, 0, 0, 0.46);
+}
+
+.sc_album_cat li {
+  display: inline-block;
+  list-style-image: none;
+  list-style: none;
+  text-align: center;
+  padding: 0px 6px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.23);
+}
+
+.sc_album_cat li a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.sc_album_cat li.active_tab {
+  background: none;
+}
+
+.sc_album_cat li:before {
+  content:"";
+}
+
+.sc_album_cat ul {
+  display: inline-block;
+}
+
+img.thumb {
+  max-width: 320px;
+  width: 90%;
+  margin: 3px;
+}
+
+#photos {
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#photos .thumbnail:hover {
+/*   border: 1px solid black; */
+  box-shadow: 1px 1px 11px rgba(0, 0, 0, 0.77);
+  transform: rotate(3deg);
+}
+
+#photos .thumbnail:hover:nth-child(even) {
+  transform: rotate(-3deg);
+}
+
+
+#photos .thumbnail {
+  width: 320px;
+  max-width: 90%;
+  margin: 5px 5px;
+  text-align: center;
+  background: white;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding-bottom: 6px;
+}
+
+#photos .thumbnail .image {
+  background: white;
+}
+
+#photos .thumbnail .caption {
+  background: white;
+  color: black;
+}
+
+#photos .thumbnail .caption a {
+  color: black;
+}
+
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: black;
+  background: rgba(0,0,0, .7);
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+#lightboxPhoto {
+  margin: 0 auto;
+}
+
+#lightboxCaption {
+  color: white;
+}
+
+.fullPhoto {
+  max-width: 90%;
+  max-height: 90vh;
+  margin: 0 auto;
+  border: 3px solid white;
+}
